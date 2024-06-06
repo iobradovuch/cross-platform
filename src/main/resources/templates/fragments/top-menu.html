@@ -45,14 +45,21 @@
                      x-transition:leave="transition ease-in duration-75 transform"
                      x-transition:leave-start="opacity-100 scale-100"
                      x-transition:leave-end="opacity-0 scale-95">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                       id="user-menu-item-0">Your Profile</a>
 
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                       id="user-menu-item-1">Settings</a>
+                       id="user-menu-item-0"
+                       @mouseenter="highlightMenuItem($event)"
+                       @mouseleave="resetMenuItem($event)">Your Profile</a>
 
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                       id="user-menu-item-2">Sign out</a>
+                       id="user-menu-item-1"
+                       @mouseenter="highlightMenuItem($event)"
+                       @mouseleave="resetMenuItem($event)">Settings</a>
+
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                       id="user-menu-item-2"
+                       @mouseenter="highlightMenuItem($event)"
+                       @mouseleave="resetMenuItem($event)">Sign out</a>
                 </div>
             </div>
         </div>
